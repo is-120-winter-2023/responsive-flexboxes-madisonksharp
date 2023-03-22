@@ -112,10 +112,11 @@ body {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(../images/hero-switzerland-800px.jpg);
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+  /* ),
+    url(../images/hero-switzerland-800px.jpg); */
 
   background-position: bottom;
 
