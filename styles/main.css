@@ -141,7 +141,7 @@ body {
 .text-wrapper h1 {
   font-size: clamp(2rem, -0.875rem + 8.333vw, 3.5rem);
 }
-.text-wrapper h2 {
+.text-wrapper p {
   color: var(--color-accent-dark);
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
 }
