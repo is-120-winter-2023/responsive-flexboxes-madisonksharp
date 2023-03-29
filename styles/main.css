@@ -108,39 +108,19 @@ body {
 }
 
 .hero {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   /* background-image: linear-gradient(
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.5)
- 
-  );
-  background-size: cover;
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    )
+    url(/images/hero-switzerland-800px.jpg); */
   background-position: bottom;
-
+  align-self: center;
   background-repeat: no-repeat;
-  
-  background-attachment: fixed;
-  align-items: center;
-  justify-content: center; */
-}
-/* .hero::before {
-  content
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.5)
-  );
-} */
-.hero picture {
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.5)
-  );
   background-size: cover;
-  background-position: bottom;
-
-  background-repeat: no-repeat;
-
   background-attachment: fixed;
   align-items: center;
   justify-content: center;
@@ -150,6 +130,9 @@ body {
   font-size: clamp(2rem, -0.875rem + 8.333vw, 3.5rem);
 }
 .hero-text {
+  display: flex;
+  flex-direction: column;
+  position: top;
   text-align: center;
   color: var(--color-accent-dark);
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
