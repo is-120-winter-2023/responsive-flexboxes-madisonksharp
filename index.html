@@ -63,53 +63,62 @@
     <p>
       Bridals, Editorial photo shoots..
     </p>
-    <nav>
-      <ul>
-        <li><a>Home</a></li>
-        <li><a href="about/">About</a></li>
-        <li><a href="contact/">Contact</a></li>
+    <nav class="navbar">
+      <ul class="menu">
+        <li class="item"><a class="nav-links">Home</a></li>
+        <li class="item"><a href="about/" class="nav-links">About</a></li>
+        <li class="item has-submenu">
+          <ul class="submenu">
+            <li class="subitem"><a href="#" class="nav-links">Portfolio</a></li>
+          </ul>
+        </li>
+        <li class="item"><a href="contact/" class="nav-links">Contact</a></li>
       </ul>
-      <svg>
-        <use href="#menuicon" />
-      </svg>
+      <span class="navbar-toggle" id="#menuicon">
+        <svg>
+          <use href="#menuicon" />
+        </svg>
+      </span>
     </nav>
   </header>
 
 
 
   <main>
-    <article>
-      <h2>About Madison</h2>
-      <figure>
+    <article class="panel">
+      <div class="text-wrapper">
+        <h2>About Madison</h2>
+        <p>Madison has always enjoyed doing makeup and hair. She received her certification in Makeup Artistry at Taylor
+          Andrews Academy in January of 2021</p>
+        <a class="button" href="about/">
+          About Madison
+        </a>
+      </div>
+      <div class="image-wrapper">
         <img src="images/profilepic.jpg"
           alt="Madison Sharp, The makeup artist. A woman with long blonde hair, blue eyes, pink lipstick and a white blouse"
           width="400" height="711">
-        <figcaption>
-          <strong>Madison Sharp - The makeup artist</strong>
-        </figcaption>
-      </figure>
-      <p>Madison has always enjoyed doing makeup and hair. She received her certification in Makeup Artistry at Taylor
-        Andrews Academy in January of 2021</p>
-      <a class="button" href="about/">
-        About Madison
-      </a>
+      </div>
     </article>
-    <article>
-      <h2>Portfolio</h2>
-      <h3> Model: Mercedes Sharp</h3>
-      <figure>
+
+
+    <article class="panel">
+      <div class="text-wrapper">
+        <h2>Portfolio</h2>
+        <h3> Model: Mercedes Sharp</h3>
+        <p>This was one of Madison's favorite makeup looks. Done on her sister, Mercedes, for a New Years party</p>
+
+        <a class="button" href="contact/">
+          Contact
+        </a>
+      </div>
+      <div class="image-wrapper">
         <img src="images/newyears1front.jpeg"
           alt="A young woman dressed in a sequined bronze-colored shirt, wearing a crown and sparkly gold eyeshadow"
           width="480" height="640">
-        <figcaption>
-          New years makeup look
-        </figcaption>
-      </figure>
-      <p>This was one of Madison's favorite makeup looks. Done on her sister, Mercedes, for a New Years party</p>
+      </div>
 
-      <a class="button" href="contact/">
-        Contact
-      </a>
+
     </article>
   </main>
 
@@ -164,9 +173,17 @@
       <rect y="30" width="100" height="20"></rect>
       <rect y="60" width="100" height="20"></rect>
     </symbol>
-
-
   </svg>
+
+
+
+  <script>
+    const header = document.queryselector("header");
+
+    document.queryselector("menuicon").addEventListener("click", () => {
+      header.classlist.toggle(close);
+    });
+  </script>
 
 </body>
 

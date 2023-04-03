@@ -149,9 +149,11 @@ body {
 main {
   display: flex;
   align-self: center;
-  max-width: 50rem;
+  max-width: 70rem;
 }
 nav {
+  background-color: var(--color-accent);
+  padding: 0 15px;
   margin: var(--gutter);
 }
 
@@ -187,6 +189,8 @@ p {
 }
 article,
 aside {
+  display: flex;
+  flex-direction: column;
   padding: 0 1rem;
   margin-bottom: 6rem;
 }
@@ -201,7 +205,7 @@ a[href]:link {
 }
 
 a[href]:visited {
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 a[href]:hover {
   color: var(--color-accent-dark);
@@ -220,6 +224,15 @@ a[href]:hover {
   color: #d4afb9;
   background-color: var(--color-primary);
 }
+.menu,
+.submenu {
+  list-style-type: none;
+}
+.item {
+  padding: 10px;
+}
+
+/* Submenu up from mobile screens*/
 
 /*cards*/
 .sr-only {
@@ -232,13 +245,9 @@ a[href]:hover {
   padding: 0;
   position: absolute;
 }
-.cards {
-  display: flex;
-  margin: 0 1.5rem;
-}
+
 .card {
-  flex: 1 1 0;
-  padding: 0.5rem;
+  flex: 0 1 24%;
   box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.15);
   transition: 0.3s;
 }
@@ -267,12 +276,83 @@ footer {
 
 @media (min-width: 300px) {
   /*mobile*/
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu li a {
+    display: block;
+    padding: 15px 5px;
+  }
+
+  .menu li.subitem a {
+    padding: 15px;
+  }
+  .item {
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .submenu {
+    display: none;
+  }
+  .submenu-active .submenu {
+    display: block;
+  }
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: var(--gutter);
+  }
+  .card {
+    flex: 0 1 calc(25%- 1em);
+  }
 }
 
 @media (min-width: 401px) {
   /*tablet*/
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: var(--gutter);
+  }
+  .card {
+    flex: 0 1 calc(25%- 1em);
+  }
 }
 
 @media (min-width: 801px) {
   /*desktop*/
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+  }
+  .item {
+    position: relative;
+    display: block;
+    width: auto;
+  }
+
+  /*panel formatting*/
+  .panel .image-wrapper {
+    order: 0;
+  }
+  .panel .text-wrapper {
+    order: 1;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: var(--gutter);
+  }
+  .card {
+    flex: 0 1 calc(50%- 1em);
+  }
 }
