@@ -245,7 +245,12 @@ a[href]:hover {
   padding: 0;
   position: absolute;
 }
-
+.cards {
+  max-width: 1200px;
+  margin: var(--gutter);
+  display: grid;
+  gap: 1rem;
+}
 .card {
   flex: 0 1 24%;
   box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.15);
@@ -302,26 +307,42 @@ footer {
     display: block;
   }
   .cards {
-    display: flex;
+    grid-template-columns: repeat(1, 1fr);
+    display: grid;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: var(--gutter);
   }
   .card {
     flex: 0 1 calc(25%- 1em);
+  }
+
+  /* .panel .image-wrapper {
+    flex: 40%;
+  }
+  .panel .text-wrapper {
+    flex: 60%;
+  } */
+  .panel {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
 @media (min-width: 401px) {
   /*tablet*/
   .cards {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: var(--gutter);
   }
   .card {
     flex: 0 1 calc(25%- 1em);
+  }
+  .panel {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -345,7 +366,16 @@ footer {
   .panel .text-wrapper {
     order: 1;
   }
-
+  /* .left .image-wrapper {
+    order: 1;
+  }
+  .left .text-wrapper {
+    order: 0;
+  } */
+  .panel {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .cards {
     display: flex;
     justify-content: space-between;
