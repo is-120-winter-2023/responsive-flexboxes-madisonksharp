@@ -234,6 +234,17 @@ a[href]:hover {
 
 /* Submenu up from mobile screens*/
 
+/* Panels */
+.panels {
+  display: flex;
+}
+.panel {
+  display: flex;
+}
+.panel .image-wrapper {
+  order: 1;
+}
+
 /*cards*/
 .sr-only {
   clip: rect(1px, 1px, 1px, 1px);
@@ -317,15 +328,14 @@ footer {
     flex: 0 1 calc(25%- 1em);
   }
 
-  /* .panel .image-wrapper {
-    flex: 40%;
-  }
   .panel .text-wrapper {
-    flex: 60%;
-  } */
-  .panel {
-    display: flex;
-    flex-wrap: wrap;
+    order: 1;
+  }
+  .panel .image-wrapper {
+    order: 0;
+  }
+  .panels {
+    flex-direction: column;
   }
 }
 
@@ -341,8 +351,19 @@ footer {
     flex: 0 1 calc(25%- 1em);
   }
   .panel {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .panel .left {
+    order: -1;
+  }
+
+  .panel .image-wrapper {
+    order: 1;
+  }
+
+  .panel h2 {
+    margin: 0;
   }
 }
 
@@ -359,22 +380,11 @@ footer {
     width: auto;
   }
 
-  /*panel formatting*/
-  .panel .image-wrapper {
-    order: 0;
-  }
-  .panel .text-wrapper {
-    order: 1;
-  }
-  /* .left .image-wrapper {
-    order: 1;
-  }
-  .left .text-wrapper {
-    order: 0;
-  } */
   .panel {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .panel .left {
+    order: -1;
   }
   .cards {
     display: flex;
