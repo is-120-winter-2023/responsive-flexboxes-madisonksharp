@@ -22,7 +22,7 @@
   <title>Contact</title>
 </head>
 
-<body>
+<body class="contact">
   <header>
     <nav>
       <ul>
@@ -34,6 +34,65 @@
   </header>
   <img src="../images/1904669_call_chat_device_message_mobile_icon.svg" alt="mobile device">
   <h1>Contact</h1>
+  <section>
+    <h2>Contact Madison</h2>
+    <form>
+
+      <label for="name">Full name</label>
+
+
+      <input type="text" name="name" id="name">
+
+      <label for="email">Email address</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="tel">Phone Number</label>
+      <input type="numbers" name="tel" id="tel" required>
+
+
+      <div class="fieldset-wrapper">
+        <fieldset>
+          <legend>Which is your preferred method of contact? (select all that apply)</legend>
+
+
+          <input type="checkbox" id="call" name="contact-method" value="call">
+          <label for="call">call</label>
+
+          <input type="checkbox" id="text" name="contact-method" value="text">
+          <label for="text">text</label>
+
+          <input type="checkbox" id="email" name="contact-method" value="email">
+          <label for="email">email</label>
+
+        </fieldset>
+      </div>
+      <div class="fieldset-wrapper">
+        <fieldset>
+          <legend>What type of makeup do you need?</legend>
+
+          <input type="radio" name="makeup-type" id="bridal" value="bridal">
+          <label for="bridal">Bridal</label>
+
+          <input type="radio" name="makeup-type" id="editorial" value="editorial">
+          <label for="editorial">Editorial</label>
+
+          <input type="radio" name="makeup-type" id="natural" value="natural">
+          <label for="natural">Natural</label>
+
+          <input type="radio" name="makeup-type" id="glam" value="glam">
+          <label for="glam">Glam</label>
+        </fieldset>
+      </div>
+
+      <label for="haiku">Compose a haiku about Vegemite</label>
+      <textarea name="haiku" id="haiku" rows="10" placeholder="5/7/5 syllable count"></textarea>
+
+
+      <button>Submit Now</button>
+
+    </form>
+  </section>
 </body>
+
 
 </html>
