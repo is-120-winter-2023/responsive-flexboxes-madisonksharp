@@ -149,7 +149,7 @@ main {
   font-size: clamp(2rem, calc(-0.875rem + 8.333vw), 3.5rem);
 }
 .text-wrapper p {
-  color: var(--color-accent-dark);
+  color: var(--color-primary);
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -169,11 +169,11 @@ main {
   justify-content: space-between;
 }
 
-.container {
+/* .container {
   max-width: 1224px;
   width: 90%;
   margin: 0 auto;
-}
+} */
 .logo {
   color: #d4afb9;
   font-size: 60px;
