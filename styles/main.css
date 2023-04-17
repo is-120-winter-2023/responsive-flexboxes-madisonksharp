@@ -169,6 +169,11 @@ main {
   justify-content: space-between;
 }
 
+.container {
+  max-width: 1224px;
+  width: 90%;
+  margin: 0 auto;
+}
 .logo {
   color: #d4afb9;
   font-size: 60px;
@@ -219,7 +224,7 @@ main {
   display: none;
 }
 
-.navbar-toggle::before,
+/* .navbar-toggle::before,
 .navbar-toggle::after {
   content: "";
   display: block;
@@ -237,7 +242,7 @@ main {
 }
 .side-menu {
   display: none;
-}
+} */
 
 /* Toggle menu icon */
 
