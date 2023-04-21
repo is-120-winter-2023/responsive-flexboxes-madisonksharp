@@ -78,8 +78,8 @@
           <input type="checkbox" id="text" name="contact-method" value="text">
           <label for="text">text</label>
 
-          <input type="checkbox" id="email-input" name="contact-method" value="email">
-          <label for="email">email</label>
+          <input type="checkbox" id="gmail" name="contact-method" value="gmail">
+          <label for="gmail">email</label>
 
         </fieldset>
       </div>
@@ -117,32 +117,34 @@
       <rect y="60" width="100" height="20"></rect>
     </symbol>
   </svg>
+
+  <script>
+    const toggle = document.querySelector(".hamburger");
+    const menu = document.querySelector(".menu");
+
+    function toggleMenu() {
+      if (menu.classList.contains("menu-active")) {
+        menu.classList.remove("menu-active");
+
+        // adds the menu (hamburger) icon 
+        // toggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";
+      } else {
+        menu.classList.add("menu-active");
+
+        // adds the close (x) icon 
+        // toggle.querySelector("a").innerHTML = "<i class=’fas fa-times’></i>";
+      }
+    }
+    /* Event Listener */
+    toggle.addEventListener("click", toggleMenu, false);
+
+
+  </script>
+
 </body>
 
 
 
-<script>
-  const toggle = document.querySelector(".hamburger");
-  const menu = document.querySelector(".menu");
-
-  function toggleMenu() {
-    if (menu.classList.contains("menu-active")) {
-      menu.classList.remove("menu-active");
-
-      // adds the menu (hamburger) icon 
-      // toggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";
-    } else {
-      menu.classList.add("menu-active");
-
-      // adds the close (x) icon 
-      // toggle.querySelector("a").innerHTML = "<i class=’fas fa-times’></i>";
-    }
-  }
-  /* Event Listener */
-  toggle.addEventListener("click", toggleMenu, false);
-
-
-</script>
 
 
 </html>
