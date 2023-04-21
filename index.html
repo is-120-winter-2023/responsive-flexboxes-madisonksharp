@@ -45,47 +45,29 @@
 <body>
   <header class="header">
     <a href="#" class="logo"> MKMua</a>
-    <div class="container">
-      <nav class="navbar">
+
+    <nav class="navbar">
+      <div class="hamburger">
+        <svg class="hmsvg">
+          <use href="#menuicon" />
+        </svg>
+      </div>
+      <ul class="menu">
+        <li class="menuItem">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="menuItem">
+          <a href="about/" class="nav-link">About</a>
+        </li>
+        <li class="menuItem">
+          <a href="contact/" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+    </nav>
 
 
 
-        <ul class="menu">
-          <li class="menuItem">
-            <a href="#" class="nav-link">Home</a>
-          </li>
-          <li class="menuItem">
-            <a href="about/" class="nav-link">About</a>
-          </li>
-          <li class="menuItem">
-            <a href="contact/" class="nav-link">Contact</a>
-          </li>
-        </ul>
-
-
-        <div class="hamb">
-          <svg class="hmsvg">
-            <use href="#menuicon" />
-          </svg>
-
-        </div>
-        <!-- <button class="hamb">
-          <i class="menuIcon">menu</i>
-          <svg class="hmsvg">
-            <use href="#menuicon" />
-          </svg>
-          <i class="closeIcon">close</i>
-        </button> -->
-      </nav>
-
-    </div>
-
-
-
-
-    <!-- <p>
-      Bridals, Editorial photo shoots..
-    </p> -->
   </header>
 
   <div class="hero">
@@ -218,32 +200,25 @@
 
 
   <script>
-    const menu = document.queryselector(".menu");
-    const menuItems = document.querySelectorAll(".menuItem");
-    const hamb = document.querySelector(".hamb");
-    const closeIcon = document.querySelector(".closeIcon");
-    const menuIcon = document.querySelector(".menuIcon");
+    const toggle = document.querySelector(".hamburger");
+    const menu = document.querySelector(".menu");
 
     function toggleMenu() {
+      if (menu.classList.contains("menu-active")) {
+        menu.classList.remove("menu-active");
 
-      if (menu.classList.contains("showMenu")) {
-        menu.classList.remove("showMenu");
-        closeIcon.style.display = "none";
-        menuIcon.style.display = "block";
+        // adds the menu (hamburger) icon 
+        // toggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";
       } else {
-        menu.classList.add("showMenu");
-        closeIcon.style.display = "block";
-        menuIcon.style.display = "none";
+        menu.classList.add("menu-active");
+
+        // adds the close (x) icon 
+        // toggle.querySelector("a").innerHTML = "<i class=’fas fa-times’></i>";
       }
     }
+    /* Event Listener */
+    toggle.addEventListener("click", toggleMenu, false);
 
-    hamb.addEventListener("click", toggleMenu);
-
-    menuItems.forEach(
-      funtion(menuItem){
-      menuItem.addEventListener("click", toggleMenu);
-    }
-    )
 
   </script>
 

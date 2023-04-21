@@ -110,6 +110,70 @@ body {
   font-size: 1rem;
   color: #444;
 }
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: #b8c4bb;
+  box-shadow: 1px 1px 5px 0px var(gray);
+  position: sticky;
+  top: 0;
+  height: 70px;
+  z-index: 1000;
+  justify-content: space-between;
+}
+
+/* .container {
+  max-width: 1224px;
+  width: 90%;
+  margin: 0 auto;
+} */
+.logo {
+  color: #d4afb9;
+  font-size: 60px;
+  margin-left: 10px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-right: 10px;
+  align-items: flex-end;
+  transition: 0.5s ease-out;
+}
+
+/*Mobile Menu*/
+.menuItem {
+  display: block;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.menuItem:hover {
+  text-decoration: underline;
+}
+.hamburger {
+  position: sticky;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.menu {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: var(--gutter);
+  display: none;
+}
+
+.menu-active {
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+}
 /* Basic Styles */
 main {
   display: flex;
@@ -154,130 +218,6 @@ main {
 }
 
 /* Menu */
-
-.header {
-  display: flex;
-  flex-direction: row;
-
-  background-color: #b8c4bb;
-  box-shadow: 1px 1px 5px 0px var(gray);
-  position: sticky;
-  top: 0;
-  /* width: 100%; */
-  height: 70px;
-  z-index: 1000;
-  justify-content: space-between;
-}
-
-/* .container {
-  max-width: 1224px;
-  width: 90%;
-  margin: 0 auto;
-} */
-.logo {
-  color: #d4afb9;
-  font-size: 60px;
-  margin-left: 10px;
-}
-.navbar {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
-  margin-right: 10px;
-  align-items: flex-end;
-  transition: 0.5s ease-out;
-}
-.menu {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0.5em;
-  list-style: none;
-}
-
-.menu li a {
-  /* display: block; */
-  padding: 15px 5px;
-}
-
-.menu li.subitem a {
-  padding: 15px;
-}
-
-/* .menu a:hover {
-  /* background-color: antiquewhite; */
-
-/* Menu Icon */
-.hamb {
-  position: fixed;
-  z-index: 100;
-  top: 1rem;
-  right: 1rem;
-  padding: 4px;
-
-  /* display: flex; */
-  cursor: pointer;
-  /* margin: auto; */
-}
-.closeIcon {
-  display: none;
-}
-
-/* .navbar-toggle::before,
-.navbar-toggle::after {
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-}
-
-.navbar-toggle::before {
-  top: 5px;
-}
-.navbar-toggle::after {
-  top: -5px;
-}
-.side-menu {
-  display: none;
-} */
-
-/* Toggle menu icon */
-
-.side-menu:checked ~ nav {
-  max-height: 100%;
-}
-.side-menu:checked ~ .hamb .navbar-toggle {
-  background: transparent;
-}
-.side-menu:checked ~ .hamb .navbar-toggle::before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-.side-menu:checked ~ .hamb .navbar-toggle::after {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-.item {
-  width: 100%;
-  display: none;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 15%;
-}
-.submenu {
-  display: none;
-}
-.submenu-active .submenu {
-  display: block;
-}
-.menu,
-.submenu {
-  list-style-type: none;
-}
 
 h1,
 h2,
@@ -468,7 +408,12 @@ section {
   /*tablet*/
 
   /* menu */
-
+  .menu {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
   /* cards */
   .cards {
     flex-direction: row;
@@ -499,15 +444,26 @@ section {
 @media (min-width: 801px) {
   /*desktop*/
   .menu {
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
     flex-wrap: nowrap;
     background: none;
+    gap: 10px;
   }
-  .item {
+  .hamburger {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  /* .item {
     position: relative;
     display: block;
     width: auto;
-  }
+  } */
 
   /* Panels */
   .panel {
